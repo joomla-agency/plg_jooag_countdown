@@ -19,9 +19,9 @@
 		minutes = Math.floor(seconds / 60);
 		seconds -= minutes * 60;
 		days == 1 ? thisEl.find(".timeRefDays").text("Tag") : thisEl.find(".timeRefDays").text("Tage");
-		hours == 1 ? thisEl.find(".timeRefHours").text("S") : thisEl.find(".timeRefHours").text("S");
-		minutes == 1 ? thisEl.find(".timeRefMinutes").text("M") : thisEl.find(".timeRefMinutes").text("M");
-		seconds == 1 ? thisEl.find(".timeRefSeconds").text("S") : thisEl.find(".timeRefSeconds").text("S");
+		hours == 1 ? thisEl.find(".timeRefHours").text("hour") : thisEl.find(".timeRefHours").text("hours");
+		minutes == 1 ? thisEl.find(".timeRefMinutes").text("minute") : thisEl.find(".timeRefMinutes").text("minutes");
+		seconds == 1 ? thisEl.find(".timeRefSeconds").text("second") : thisEl.find(".timeRefSeconds").text("seconds");
 		if (r["format"] == "on") {
 			days = String(days).length >= 2 ? days : "0" + days;
 			hours = String(hours).length >= 2 ? hours : "0" + hours;

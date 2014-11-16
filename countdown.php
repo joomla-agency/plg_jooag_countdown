@@ -17,17 +17,9 @@ class plgContentCountdown extends JPlugin
 		parent::__construct($subject, $config);
 	}
 	
-	public function onAfterDispatch() {
-		$doc = JFactory::getDocument();	
-		$doc->addScript(JURI::root().'plugins/content/countdown/countdown.js');
-		$doc->addStyleDeclaration( "#countdown p {display: inline-block;  font-size: 20px;font-weight:600;}" );	
-		return;
-	}
-	
 	public function onContentPrepare($context, &$article, &$params, $page=0 )
 	{
 		// simple performance check to determine whether plugin should process further
-		
 		if ( JString::strpos( $article->text, 'countdown' ) === false ) {
 			return true;
 		}
@@ -40,13 +32,14 @@ class plgContentCountdown extends JPlugin
 		return true;
 	}
 	
-
-	
 	protected function plgCountdownDTN_replacer ( &$matches) 
 	{
 		$date = $matches[1];
 		
 		$doc = JFactory::getDocument();	
+		$doc->addScript(JURI::root().'plugins/content/countdown/countdown.js');
+		$doc->addStyleDeclaration( "#countdown p {display: inline-block;  font-size: 20px;font-weight:600;}" );	
+		
 		$javascript = 'jQuery(document).ready(function () {';
 		$javascript .= 'jQuery("#countdown").countdown({';
 		$javascript .= 'date: "'.$date.'",';
@@ -54,7 +47,8 @@ class plgContentCountdown extends JPlugin
 		$javascript .= '});';
 		$javascript .= '});';
 		$doc->addScriptDeclaration($javascript);
-
+		
+		
 		$days = '<div id="countdown">
 					<p class="days">00</p>
 					<p class="timeRefDays">Tage</p> -
@@ -62,7 +56,7 @@ class plgContentCountdown extends JPlugin
 					<p class="minutes">00</p>:
 					<p class="seconds">00</p>
 				</div>';
-				
+		
 		/* Backup
 		$days = '<div id="countdown">
 					<p class="days">00</p>
