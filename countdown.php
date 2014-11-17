@@ -23,7 +23,7 @@ class plgContentCountdown extends JPlugin
 		if ( JString::strpos( $article->text, 'countdown' ) === false ) {
 			return true;
 		}
-
+	
 		// define the regular expression for the plugin
 		$regexDTN = "#{countdown}(.*?){/countdown}#s";
 
@@ -35,10 +35,9 @@ class plgContentCountdown extends JPlugin
 	protected function plgCountdownDTN_replacer ( &$matches) 
 	{
 		$date = $matches[1];
-		
 		$doc = JFactory::getDocument();	
 		$doc->addScript(JURI::root().'plugins/content/countdown/countdown.js');
-		$doc->addStyleDeclaration( "#countdown p {display: inline-block;  font-size: 20px;font-weight:600;}" );	
+		$doc->addStyleDeclaration( "#countdown span {font-size: 20px;font-weight:600;color:red;}" );	
 		
 		$javascript = 'jQuery(document).ready(function () {';
 		$javascript .= 'jQuery("#countdown").countdown({';
@@ -47,14 +46,10 @@ class plgContentCountdown extends JPlugin
 		$javascript .= '});';
 		$javascript .= '});';
 		$doc->addScriptDeclaration($javascript);
-		
-		
 		$days = '<div id="countdown">
-					<p class="days">00</p>
-					<p class="timeRefDays">Tage</p> -
-					<p class="hours">00</p>:
-					<p class="minutes">00</p>:
-					<p class="seconds">00</p>
+					<span class="days">00</span>
+					<span class="timeRefDays">Tage</span> -
+					<span class="hours">00</span>:<span class="minutes">00</span>:<span class="seconds">00</span>
 				</div>';
 		
 		/* Backup
