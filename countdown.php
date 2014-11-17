@@ -1,10 +1,8 @@
 <?php
-/**
-Joomla Agency
-A small Plugin to Calculate the Days for a specific Date
-Usage:
-Put somewhere in your Content or Module following Snippet - {countdown}02 December 2014 18:45:00{/countdown}
-**/
+//Joomla Agency
+//A small Plugin to Calculate the Days for a specific Date
+//Usage:
+//Put somewhere in your Content or Module following Snippet - {countdown}02 December 2014 18:45:00{/countdown}
 
 defined( '_JEXEC' ) or die( 'Restricted access' );
 
