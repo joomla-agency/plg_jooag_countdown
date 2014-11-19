@@ -22,7 +22,7 @@ class plgContentCountdown extends JPlugin
 			return true;
 		}
 	
-		// define the regular expression for the plugin
+		// Regular expression for the plugin
 		$regex = "#{countdown}(.*?){/countdown}#s";
 
 		// Replacement of {countdown}xxx{/countdown}
