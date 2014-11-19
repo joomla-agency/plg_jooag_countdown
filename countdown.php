@@ -23,10 +23,10 @@ class plgContentCountdown extends JPlugin
 		}
 	
 		// define the regular expression for the plugin
-		$regexDTN = "#{countdown}(.*?){/countdown}#s";
+		$regex = "#{countdown}(.*?){/countdown}#s";
 
 		// perform the replacement
-		$article->text = preg_replace_callback( $regexDTN, array(&$this,'plgCountdownDTN_replacer'), $article->text );
+		$article->text = preg_replace_callback( $regex, array(&$this,'plgCountdownDTN_replacer'), $article->text );
 		return true;
 	}
 	
