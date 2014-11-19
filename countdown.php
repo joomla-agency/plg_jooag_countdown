@@ -17,7 +17,7 @@ class plgContentCountdown extends JPlugin
 	
 	public function onContentPrepare($context, &$article, &$params, $page=0 )
 	{
-		// simple performance check to determine whether plugin should process further
+		// Performance Check
 		if ( JString::strpos( $article->text, 'countdown' ) === false ) {
 			return true;
 		}
@@ -25,7 +25,7 @@ class plgContentCountdown extends JPlugin
 		// define the regular expression for the plugin
 		$regex = "#{countdown}(.*?){/countdown}#s";
 
-		// perform the replacement
+		// Replacement of {countdown}xxx{/countdown}
 		$article->text = preg_replace_callback( $regex, array(&$this,'plgCountdownDTN_replacer'), $article->text );
 		return true;
 	}
@@ -33,7 +33,10 @@ class plgContentCountdown extends JPlugin
 	protected function plgCountdownDTN_replacer ( &$matches) 
 	{
 		$date = $matches[1];
-		$doc = JFactory::getDocument();	
+		
+		//Javascript Part
+		JHtml::_('jquery.framework');
+		$doc = JFactory::getDocument();
 		$doc->addScript(JURI::root().'plugins/content/countdown/countdown.js');
 		$doc->addStyleDeclaration( "#countdown span {font-size: 20px;font-weight:600;color:red;}" );	
 		
@@ -44,6 +47,8 @@ class plgContentCountdown extends JPlugin
 		$javascript .= '});';
 		$javascript .= '});';
 		$doc->addScriptDeclaration($javascript);
+		
+		//Output
 		$days = '<div id="countdown">
 					<span class="days">00</span>
 					<span class="timeRefDays">Tage</span> -
