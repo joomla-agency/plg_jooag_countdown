@@ -4,10 +4,10 @@
 	<author>Ufuk Avcu</author>
 	<creationDate>13.11.2014</creationDate>
 	<copyright>Copyright (C) 2009 - 2015 Joomla Agency. All rights reserved.</copyright>
-	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<license>GNU General Public License version 2 or later</license>
 	<authorEmail>info@joomla-agentur.de</authorEmail>
 	<authorUrl>www.joomla-agentur.de</authorUrl>
-	<version>0.0.1</version>
+	<version>3.0 Alpha</version>
 	<description>
 	A small Plugin to display a Countdown to a Date in the future. 
 	<![CDATA[
