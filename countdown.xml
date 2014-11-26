@@ -4,23 +4,40 @@
 	<author>Ufuk Avcu</author>
 	<creationDate>13.11.2014</creationDate>
 	<copyright>Copyright (C) 2009 - 2015 Joomla Agency. All rights reserved.</copyright>
-	<license>GNU General Public License version 2 or later</license>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
 	<authorEmail>info@joomla-agentur.de</authorEmail>
 	<authorUrl>www.joomla-agentur.de</authorUrl>
-	<version>3.0 Alpha</version>
+	<version>0.0.1</version>
 	<description>
 	A small Plugin to display a Countdown to a Date in the future. 
 	<![CDATA[
 	<h4>HOW TO USE:</h4>
 	<p>Use the syntax below in your article or module!</br>
-	Replace the date with your own!</p>
+	Replace the date with your own!
 	<code>{countdown}8 September 2014 09:51:10{/countdown}</code>
+	</p>
+	<br/>
+<p><strong>Default Countdown Syntax</strong></p>
+&lt;span class="days"&gt;00&lt;/span&gt;<br/>
+&lt;span class="timeRefDays"&gt;days&lt;/span&gt;<br/>
+&lt;span class="hours"&gt;00&lt;/span&gt;<br/>
+&lt;span class="timeRefHours"&gt;hours&lt;/span&gt;<br/>
+&lt;span class="minutes"&gt;00&lt;/span&gt;<br/>
+&lt;span class="timeRefMinutes"&gt;minutes&lt;/span&gt;<br/>
+&lt;span class="seconds"&gt;00&lt;/span&gt;<br/>
+&lt;span class="timeRefSeconds"&gt;seconds&lt;/span&gt;<br/>
 	]]>
-	  
-	
 	</description>
 	<files>
 		<filename plugin="countdown">countdown.php</filename>
 		<filename plugin="countdown">countdown.js</filename>
 	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="countdowncss" type="textarea" default="" label="Custom CSS" description="" rows="10" cols="5" filter="raw"/>
+				<field name="countdownhtml" type="textarea" default="" label="Custom Output" description="" rows="10" cols="5" filter="raw"/>
+			</fieldset>
+		</fields>
+	</config>
 </extension>
