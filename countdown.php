@@ -24,7 +24,7 @@ class plgContentCountdown extends JPlugin
 	public function onContentPrepare($context, &$article, &$params, $page=0 )
 	{
 		// Performance Check
-		if ( JString::strpos( $article->text, 'countdown' ) === false ) {
+		if ( JString::strpos( $article->text, '{countdown}' ) === false ) {
 			return true;
 		}
 	
