@@ -1,10 +1,14 @@
 <?php
 /**
-Joomla Agency
-A small Plugin to Calculate the Days for a specific Date
-Usage:
-Put somewhere in your Content or Module following Snippet - {countdown}02 December 2014 18:45:00{/countdown}
-**/
+* @version 3.0 Alpha 	+Joomla Agency
+* @for Joomla 3.3+ 	+A small Plugin to Calculate the Days for a specific Date
+* @package JooAg Countdown 	+Usage:
+* @author Joomla Agentur - http://www.joomla-agentur.de 	+Put somewhere in your Content or Module following Snippet - {countdown}02 December 2014 18:45:00{/countdown}
+* @copyright Copyright (c) 2009 - 2015 Joomla-Agentur All rights reserved.
+* @license GNU General Public License version 2 or later; 	
+* @description A small Plugin to Calculate the Days for a specific Date 	
+* @usage Put somewhere in your Content or Module following Snippet - {countdown}02 December 2014 18:45:00{/countdown} 	
+*/
 
 defined( '_JEXEC' ) or die( 'Restricted access' );
 
@@ -19,15 +23,15 @@ class PlgContentCountdown extends JPlugin
 	
 	public function onContentPrepare($context, &$article, &$params, $page = 0)
 	{
-		// simple performance check to determine whether plugin should process further
+		// Performance Check
 		if ( JString::strpos( $article->text, '{countdown}' ) === false ) {
 			return true;
 		}
 
-		// define the regular expression for the plugin
+		// Regular expression
 		$regex = "#{countdown}(.*?){/countdown}#s";
 
-		// perform the replacement
+		// Replacement of {countdown}xxx{/countdown}
 		$article->text = preg_replace_callback( $regex, array(&$this,'plgCountdownDTN_replacer'), $article->text );
 		$article->introtext = preg_replace_callback( $regex, array(&$this,'plgCountdownDTN_replacer'), $article->text );
 	}
