@@ -38,11 +38,12 @@ class PlgContentCountdown extends JPlugin
 	
 	protected function plgCountdownDTN_replacer (&$matches) 
 	{
+		
 		$date = $matches[1];
 		$doc = JFactory::getDocument();	
 		JHtml::_('jquery.framework');
 		$doc->addScript(JURI::root().'plugins/content/countdown/countdown.js');
-		$doc->addStyleDeclaration( ".countdown span {font-size: 20px;font-weight:600;color:red;}" );	
+		$doc->addStyleDeclaration($this->params->def('countdowncss'));	
 		$randomId = rand();
 		
 		$javascript = 'jQuery(document).ready(function () {';
@@ -52,25 +53,16 @@ class PlgContentCountdown extends JPlugin
 		$javascript .= '});';
 		$javascript .= '});';
 		$doc->addScriptDeclaration($javascript);
-		$days = '<div class="countdown" id="countdown'.$randomId.'">
-					<span class="days">00</span>
-					<span class="timeRefDays">Tage</span> -
-					<span class="hours">00</span>:<span class="minutes">00</span>:<span class="seconds">00</span>
-				</div>';
 		
-		/* Backup
-		$days = '<div id="countdown">
-					<p class="days">00</p>
-					<p class="timeRefDays">Tage</p>
-					<p class="hours">00</p>
-					<p class="timeRefHours">Stunden</p>
-					<p class="minutes">00</p>
-					<p class="timeRefMinutes">Minuten</p>
-					<p class="seconds">00</p>
-					<p class="timeRefSeconds">Sekunden</p>
-				</div>';
-		*/
+		$htmlOutput = '
+		<span class="days">00</span> <span class="timeRefDays">days</span> 
+		<span class="hours">00</span> <span class="timeRefHours">hours</span> 
+		<span class="minutes">00</span> <span class="timeRefMinutes">minutes</span> 
+		<span class="seconds">00</span> <span class="timeRefSeconds">seconds</span>';
 		
-		return $days;
+		if (!empty ($this->params->def('countdownhtml'))){$htmlOutput = $this->params->def('countdownhtml');}
+		$countdown = '<div class="countdown" id="countdown'.$randomId.'">'.$htmlOutput.'</div>';
+		
+		return $countdown;
 	}
 }
