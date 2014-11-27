@@ -11,7 +11,9 @@
  * @thanksto Thanks to Guido De Gobbis from http://joomtools.de for his great contributions!
  */
 defined( '_JEXEC' ) or die( 'Restricted access' );
+
 jimport( 'joomla.plugin.plugin');
+
 class PlgContentCountdown extends JPlugin
 {
 	public function __construct(&$subject, $config)
@@ -28,16 +30,17 @@ class PlgContentCountdown extends JPlugin
 		$doc = JFactory::getDocument();
 		JHtml::_('jquery.framework');
 		$doc->addScript(JURI::root().'plugins/content/countdown/countdown.js');
-		if($this->params->get('countdowncss')){
-			$doc->addStyleDeclaration($this->params->get('countdowncss'));
-		}
+		$doc->addStyleDeclaration($this->params->get('countdowncss'));
 		
 		// Regular expression
 		$regex = "#{countdown}(.*?){/countdown}#s";
 		
 		// Replacement of {countdown}xxx{/countdown}
 		$article->text = preg_replace_callback( $regex, array(&$this,'plgCountdownDTN_replacer'), $article->text );
-		$article->introtext = preg_replace_callback( $regex, array(&$this,'plgCountdownDTN_replacer'), $article->text );
+		
+		if(!empty($article->introtext)){
+			$article->introtext = preg_replace_callback( $regex, array(&$this,'plgCountdownDTN_replacer'), $article->introtext );
+		}	
 	}
 	
 	protected function plgCountdownDTN_replacer (&$matches)
