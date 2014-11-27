@@ -30,7 +30,9 @@ class PlgContentCountdown extends JPlugin
 		$doc = JFactory::getDocument();
 		JHtml::_('jquery.framework');
 		$doc->addScript(JURI::root().'plugins/content/countdown/countdown.js');
-		$doc->addStyleDeclaration($this->params->get('countdowncss'));
+		if($this->params->get('countdowncss')){
+			$doc->addStyleDeclaration($this->params->get('countdowncss'));
+		}
 		
 		// Regular expression
 		$regex = "#{countdown}(.*?){/countdown}#s";
