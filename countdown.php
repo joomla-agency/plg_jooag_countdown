@@ -20,19 +20,19 @@ class PlgContentCountdown extends JPlugin
 	}
 	public function onContentPrepare($context, &$article, &$params, $page = 0)
 	{
-// Performance Check
+		// Performance Check
 		if ( JString::strpos( $article->text, '{countdown}' ) === false ) {
 			return true;
 		}
 		$doc = JFactory::getDocument();
 		JHtml::_('jquery.framework');
 		$doc->addScript(JURI::root().'plugins/content/countdown/countdown.js');
-		$doc->addStyleDeclaration($this->params->def('countdowncss'));
-// Regular expression
+		$doc->addStyleDeclaration($this->params->get('countdowncss'));
+		// Regular expression
 		$regex = "#{countdown}(.*?){/countdown}#s";
-// Replacement of {countdown}xxx{/countdown}
+		// Replacement of {countdown}xxx{/countdown}
 		$article->text = preg_replace_callback( $regex, array(&$this,'plgCountdownDTN_replacer'), $article->text );
-		$article->introtext = preg_replace_callback( $regex, array(&$this,'plgCountdownDTN_replacer'), $article->text );
+		$article->introtext = preg_replace_callback( $regex, array(&$this,'plgCountdownDTN_replacer'), $article->introtext );
 	}
 	protected function plgCountdownDTN_replacer (&$matches)
 	{
