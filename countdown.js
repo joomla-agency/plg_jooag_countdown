@@ -59,3 +59,12 @@
 		return futureFormattedDate
 	}
 });
+
+jQuery(document).ready(function ($) {
+	$(".countdown").each(function () {
+		$(this).countdown({
+			date: $(this).attr("data-countdown"),
+			format: "on"
+		});
+	});
+});
