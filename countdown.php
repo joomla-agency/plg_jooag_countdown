@@ -18,6 +18,7 @@ class PlgContentCountdown extends JPlugin
 	{
 		parent::__construct($subject, $config);
 	}
+	
 	public function onContentPrepare($context, &$article, &$params, $page = 0)
 	{
 		// Performance Check
@@ -27,13 +28,18 @@ class PlgContentCountdown extends JPlugin
 		$doc = JFactory::getDocument();
 		JHtml::_('jquery.framework');
 		$doc->addScript(JURI::root().'plugins/content/countdown/countdown.js');
-		$doc->addStyleDeclaration($this->params->get('countdowncss'));
+		if($this->params->get('countdowncss')){
+			$doc->addStyleDeclaration($this->params->get('countdowncss'));
+		}
+		
 		// Regular expression
 		$regex = "#{countdown}(.*?){/countdown}#s";
+		
 		// Replacement of {countdown}xxx{/countdown}
 		$article->text = preg_replace_callback( $regex, array(&$this,'plgCountdownDTN_replacer'), $article->text );
 		$article->introtext = preg_replace_callback( $regex, array(&$this,'plgCountdownDTN_replacer'), $article->text );
 	}
+	
 	protected function plgCountdownDTN_replacer (&$matches)
 	{
 		$date = $matches[1];
