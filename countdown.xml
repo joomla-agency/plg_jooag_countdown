@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension version="3.0" type="plugin" method="upgrade" group="content">
-	<name>Countdown</name>
+	<name>JooAg Countdown</name>
 	<author>Ufuk Avcu</author>
 	<creationDate>13.11.2014</creationDate>
 	<copyright>Copyright (C) 2009 - 2015 Joomla Agency. All rights reserved.</copyright>
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
 	<authorEmail>info@joomla-agentur.de</authorEmail>
 	<authorUrl>www.joomla-agentur.de</authorUrl>
-	<version>0.0.1</version>
+	<version>1.0 Beta</version>
 	<description>
 	A small Plugin to display a Countdown to a Date in the future. 
 	<![CDATA[
