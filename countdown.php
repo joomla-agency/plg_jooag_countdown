@@ -13,7 +13,7 @@
  */
 defined( '_JEXEC' ) or die( 'Restricted access' );
 
-class PlgContentCountdown extends JPlugin
+class PlgContentJooagcountdown extends JPlugin
 {
 	public function __construct(&$subject, $config)
 	{
