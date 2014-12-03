@@ -28,7 +28,7 @@ class PlgContentJooagcountdown extends JPlugin
 		}
 		$doc = JFactory::getDocument();
 		JHtml::_('jquery.framework');
-		$doc->addScript(JURI::root().'plugins/content/countdown/countdown.js');
+		$doc->addScript(JURI::root().'plugins/content/jooag_countdown/jquery.countdown.js');
 		if($this->params->get('countdowncss')){
 			$doc->addStyleDeclaration($this->params->get('countdowncss'));
 		}
