@@ -1,14 +1,15 @@
 <?php
 /**
- * @version 3.0 Alpha +Joomla Agency
- * @for Joomla 3.3+ +A small Plugin to Calculate the Days for a specific Date
- * @package JooAg Countdown +Usage:
- * @author Joomla Agentur - http://www.joomla-agentur.de +Put somewhere in your Content or Module following Snippet - {countdown}02 December 2014 18:45:00{/countdown}
- * @copyright Copyright (c) 2009 - 2015 Joomla-Agentur All rights reserved.
- * @license GNU General Public License version 2 or later;
+ * @version 	3.x.0 Beta +Joomla Agency
+ * @for 	Joomla 3.3+ 
+ * @usage 	A small Plugin to Calculate the Days for a specific Date
+ * @package 	JooAg Countdown +Usage:
+ * @author 	Joomla Agentur - http://www.joomla-agentur.de +Put somewhere in your Content or Module following Snippet - {countdown}02 December 2014 18:45:00{/countdown}
+ * @copyright 	Copyright (c) 2009 - 2015 Joomla-Agentur All rights reserved.
+ * @license 	GNU General Public License version 2 or later;
  * @description A small Plugin to Calculate the Days for a specific Date
- * @usage Put somewhere in your Content or Module following Snippet - {countdown}02 December 2014 18:45:00{/countdown}
- * @thanksto Thanks to Guido De Gobbis from http://joomtools.de for his great contributions!
+ * @usage 	Put somewhere in your Content or Module following Snippet - {countdown}02 December 2014 18:45:00{/countdown}
+ * @thanksto 	Thanks to Guido De Gobbis from http://joomtools.de for his great contributions!
  */
 defined( '_JEXEC' ) or die( 'Restricted access' );
 
