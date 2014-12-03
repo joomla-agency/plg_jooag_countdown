@@ -32,7 +32,10 @@
 	<files>
 		<filename plugin="jooag_countdown">jooag_countdown.php</filename>
 		<filename plugin="jooag_countdown">jquery.countdown.js</filename>
+<<<<<<< HEAD:jooag_countdown.xml
 		<folder plugin="jooag_countdown">languages</folder>
+=======
+>>>>>>> origin/master:jooag_countdown.xml
 	</files>
 	
 	<languages folder="language">		
