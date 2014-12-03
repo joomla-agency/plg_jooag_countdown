@@ -36,10 +36,10 @@
 	</files>
 	
 	<languages folder="language">		
-		<language tag="en-GB">en-GB.plg_jooag_countdown.ini</language>
-		<language tag="en-GB">en-GB.plg_jooag_countdown.sys.ini</language>
-		<language tag="de-DE">de-DE.plg_jooag_countdown.ini</language>
-		<language tag="de-DE">de-DE.plg_jooag_countdown.sys.ini</language>
+		<language tag="en-GB">languages/en-GB.plg_jooag_countdown.ini</language>
+		<language tag="en-GB">languages/en-GB.plg_jooag_countdown.sys.ini</language>
+		<language tag="de-DE">languages/de-DE.plg_jooag_countdown.ini</language>
+		<language tag="de-DE">languages/de-DE.plg_jooag_countdown.sys.ini</language>
 	</languages>
 	
 	<config>
