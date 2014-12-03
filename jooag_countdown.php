@@ -15,11 +15,6 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 
 class PlgContentJooagcountdown extends JPlugin
 {
-	public function __construct(&$subject, $config)
-	{
-		parent::__construct($subject, $config);
-	}
-	
 	public function onContentPrepare($context, &$article, &$params, $page = 0)
 	{
 		// Performance Check
