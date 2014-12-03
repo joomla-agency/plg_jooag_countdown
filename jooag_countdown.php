@@ -1,11 +1,7 @@
 <?php
 /**
  * @package 	JooAg Countdown
-<<<<<<< HEAD:jooag_countdown.php
  * @version 	3.x.0 Beta
-=======
- * @version 	3.x.0
->>>>>>> origin/master:jooag_countdown.php
  * @for 	Joomla 3.3+ 
  * @author 	Joomla Agentur - http://www.joomla-agentur.de
  * @copyright 	Copyright (c) 2009 - 2015 Joomla-Agentur All rights reserved.
