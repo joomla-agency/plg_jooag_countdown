@@ -29,8 +29,8 @@
 	]]>
 	</description>
 	<files>
-		<filename plugin="countdown">jooagcountdown.php</filename>
-		<filename plugin="countdown">countdown.js</filename>
+		<filename plugin="countdown">jooag_countdown.php</filename>
+		<filename plugin="countdown">jquery.countdown.js</filename>
 	</files>
 	<config>
 		<fields name="params">
