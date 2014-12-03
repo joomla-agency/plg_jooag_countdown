@@ -1,10 +1,10 @@
 <?php
 /**
- * @version 	3.x.0 Beta +Joomla Agency
+ * @package 	JooAg Countdown
+ * @version 	3.x.0
  * @for 	Joomla 3.3+ 
- * @usage 	A small Plugin to Calculate the Days for a specific Date
- * @package 	JooAg Countdown +Usage:
- * @author 	Joomla Agentur - http://www.joomla-agentur.de +Put somewhere in your Content or Module following Snippet - {countdown}02 December 2014 18:45:00{/countdown}
+ * @author 	Joomla Agentur - http://www.joomla-agentur.de 
+ * @author 	Joomla Agency - http://www.joomla-agency.com 
  * @copyright 	Copyright (c) 2009 - 2015 Joomla-Agentur All rights reserved.
  * @license 	GNU General Public License version 2 or later;
  * @description A small Plugin to Calculate the Days for a specific Date
