@@ -3,12 +3,10 @@
  * @package 	JooAg Countdown
  * @version 	3.x.0
  * @for 	Joomla 3.3+ 
- * @author 	Joomla Agentur - http://www.joomla-agentur.de 
- * @author 	Joomla Agency - http://www.joomla-agency.com 
+ * @author 	Joomla Agentur - http://www.joomla-agentur.de
  * @copyright 	Copyright (c) 2009 - 2015 Joomla-Agentur All rights reserved.
  * @license 	GNU General Public License version 2 or later;
  * @description A small Plugin to Calculate the Days for a specific Date
- * @usage 	Put somewhere in your Content or Module following Snippet - {countdown}02 December 2014 18:45:00{/countdown}
  * @thanksto 	Thanks to Guido De Gobbis from http://joomtools.de for his great contributions!
  */
 defined( '_JEXEC' ) or die( 'Restricted access' );
@@ -32,14 +30,14 @@ class PlgContentJooagcountdown extends JPlugin
 		$regex = "#{countdown}(.*?){/countdown}#s";
 		
 		// Replacement of {countdown}xxx{/countdown}
-		$article->text = preg_replace_callback( $regex, array(&$this,'plgCountdownDTN_replacer'), $article->text );
+		$article->text = preg_replace_callback( $regex, array(&$this,'plgCountdownOutput'), $article->text );
 		
 		if(!empty($article->introtext)){
-			$article->introtext = preg_replace_callback( $regex, array(&$this,'plgCountdownDTN_replacer'), $article->introtext );
+			$article->introtext = preg_replace_callback( $regex, array(&$this,'plgCountdownOutput'), $article->introtext );
 		}	
 	}
 	
-	protected function plgCountdownDTN_replacer (&$matches)
+	protected function plgCountdownOutput (&$matches)
 	{
 		$date = $matches[1];
 		$_htmlOutput = '
