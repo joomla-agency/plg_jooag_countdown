@@ -13,8 +13,6 @@
  */
 defined( '_JEXEC' ) or die( 'Restricted access' );
 
-jimport( 'joomla.plugin.plugin');
-
 class PlgContentCountdown extends JPlugin
 {
 	public function __construct(&$subject, $config)
