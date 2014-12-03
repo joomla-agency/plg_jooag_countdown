@@ -17,21 +17,31 @@
 	<code>{countdown}8 September 2014 09:51:10{/countdown}</code>
 	</p>
 	<br/>
-<p><strong>Default Countdown Syntax</strong></p>
-&lt;span class="days"&gt;00&lt;/span&gt;<br/>
-&lt;span class="timeRefDays"&gt;days&lt;/span&gt;<br/>
-&lt;span class="hours"&gt;00&lt;/span&gt;<br/>
-&lt;span class="timeRefHours"&gt;hours&lt;/span&gt;<br/>
-&lt;span class="minutes"&gt;00&lt;/span&gt;<br/>
-&lt;span class="timeRefMinutes"&gt;minutes&lt;/span&gt;<br/>
-&lt;span class="seconds"&gt;00&lt;/span&gt;<br/>
-&lt;span class="timeRefSeconds"&gt;seconds&lt;/span&gt;<br/>
-	]]>
+	<p><strong>Default Countdown Syntax</strong></p>
+	&lt;span class="days"&gt;00&lt;/span&gt;<br/>
+	&lt;span class="timeRefDays"&gt;days&lt;/span&gt;<br/>
+	&lt;span class="hours"&gt;00&lt;/span&gt;<br/>
+	&lt;span class="timeRefHours"&gt;hours&lt;/span&gt;<br/>
+	&lt;span class="minutes"&gt;00&lt;/span&gt;<br/>
+	&lt;span class="timeRefMinutes"&gt;minutes&lt;/span&gt;<br/>
+	&lt;span class="seconds"&gt;00&lt;/span&gt;<br/>
+	&lt;span class="timeRefSeconds"&gt;seconds&lt;/span&gt;<br/>
+		]]>
 	</description>
+	
 	<files>
-		<filename plugin="countdown">countdown.php</filename>
-		<filename plugin="countdown">countdown.js</filename>
+		<filename plugin="jooag_countdown">jooag_countdown.php</filename>
+		<filename plugin="jooag_countdown">jquery.countdown.js</filename>
+		<folder plugin="jooag_countdown">languages</folder>
 	</files>
+	
+	<languages folder="language">		
+		<language tag="en-GB">en-GB/en-GB.plg_jooag_countdown.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_jooag_countdown.sys.ini</language>
+		<language tag="de-DE">de-DE/de-DE.plg_jooag_countdown.ini</language>
+		<language tag="de-DE">de-DE/de-DE.plg_jooag_countdown.sys.ini</language>
+	</languages>
+	
 	<config>
 		<fields name="params">
 			<fieldset name="basic">

@@ -1,3 +1,4 @@
+<?php header('Content-Type: text/javascript'); ?>
 /*
  * Basic Count Down to Date and Time
  * Author: @mrwigster / trulycode.com
@@ -18,7 +19,7 @@
 			seconds -= hours * 60 * 60;
 			minutes = Math.floor(seconds / 60);
 			seconds -= minutes * 60;
-			days == 1 ? thisEl.find(".timeRefDays").text("Tag") : thisEl.find(".timeRefDays").text("Tage");
+			days == 1 ? thisEl.find(".timeRefDays").text("day") : thisEl.find(".timeRefDays").text("days");
 			hours == 1 ? thisEl.find(".timeRefHours").text("hour") : thisEl.find(".timeRefHours").text("hours");
 			minutes == 1 ? thisEl.find(".timeRefMinutes").text("minute") : thisEl.find(".timeRefMinutes").text("minutes");
 			seconds == 1 ? thisEl.find(".timeRefSeconds").text("second") : thisEl.find(".timeRefSeconds").text("seconds");
@@ -66,7 +67,6 @@ jQuery(document).ready(function ($) {
 		$(this).countdown({
 			date: $(this).attr("data-countdown"),
 			format: "on"
-
 		});
 	});
 });
