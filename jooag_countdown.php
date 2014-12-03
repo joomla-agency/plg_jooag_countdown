@@ -9,7 +9,7 @@
  * @description A small Plugin to Calculate the Days for a specific Date
  * @thanksto 	Thanks to Guido De Gobbis from http://joomtools.de for his great contributions!
  */
-defined( '_JEXEC' ) or die( 'Restricted access' );
+defined('_JEXEC') or die;
 
 class PlgContentJooag_countdown extends JPlugin
 {
