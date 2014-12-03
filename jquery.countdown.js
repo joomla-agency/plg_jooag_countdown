@@ -1,4 +1,3 @@
-<?php header('Content-Type: text/javascript'); ?>
 /*
  * Basic Count Down to Date and Time
  * Author: @mrwigster / trulycode.com
