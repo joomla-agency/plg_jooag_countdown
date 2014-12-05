@@ -19,6 +19,8 @@ class PlgContentJooag_countdown extends JPlugin
 		if ( JString::strpos( $article->text, '{countdown}' ) === false ) {
 			return true;
 		}
+		
+		//JS and CSS
 		$doc = JFactory::getDocument();
 		JHtml::_('jquery.framework');
 		$doc->addScript(JURI::root().'plugins/content/jooag_countdown/jquery.countdown.js');
