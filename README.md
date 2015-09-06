@@ -1,11 +1,11 @@
-Countdown Plugin for Joomla 3.4
+#Countdown Plugin for Joomla 3.4
 
-Documentation:
+##Documentation:
 Comming soon...
 
-Roadmap
-[] Different Languages
-[] Different Styles
-[] Different Format
-[] Different Output
-[] Documentation
+##Roadmap
+- [ ] Different Languages
+- [ ] Different Styles
+- [ ] Different Format
+- [ ] Different Output
+- [ ] Documentation
